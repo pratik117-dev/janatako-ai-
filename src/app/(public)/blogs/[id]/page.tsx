@@ -224,27 +224,35 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ id:
           <MarkdownRenderer content={cleanContent} />
         </div>
 
-        {/* Author bio section */}
+        {/* JAI Platform Info */}
         <footer className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-              <Image
-                src="https://res.cloudinary.com/jeevankc17/image/upload/v1770086725/llpp_v7ssqd.jpg"
-                alt="Jeevan KC"
-                width={64}
-                height={64}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">Jeevan KC</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Software developer and blogger passionate about web technologies, databases, and system design. 
-                Sharing knowledge to help others grow in their tech journey.
+              <h3 className="font-bold text-lg mb-4">JAI को बारेमा</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                JAI एक काल्पनिक सार्वजनिक–जवाफदेही AI चरित्र हो।
+                यो नेपालको निर्वाचन २०८२ मा केन्द्रित छ।
+                JAI ले सार्वजनिक दाबी र वाचाहरूको तथ्यपरक विश्लेषण गर्छ —
+                भावनाको होइन, तथ्यको आधारमा।
               </p>
-              <div className="flex gap-4 mt-4">
-                <a href="https://www.linkedin.com/in/jeevankc17/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">LinkedIn</a>
-              </div>
+            </div>
+            
+            <div className="rounded-lg border border-border bg-secondary/30 p-6">
+              <h4 className="font-bold mb-3">JAI के होइन</h4>
+              <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                <li>• उम्मेदवार होइन</li>
+                <li>• पार्टी होइन</li>
+                <li>• प्रचारक होइन</li>
+                <li>• भविष्यवाणी गर्ने होइन</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-3">JAI कसरी काम गर्छ</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                JAI ले सार्वजनिक दाबीहरूको विश्लेषण गर्छ — चार आयाममा:
+                Feasibility, Cost, Timeline, र Impact।
+              </p>
             </div>
           </div>
         </footer>

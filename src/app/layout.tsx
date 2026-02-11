@@ -13,12 +13,8 @@ export const metadata: Metadata = {
   },
   description: 'जनताको AI - नेपालको तथ्य-आधारित विश्लेषण र अन्तर्क्रियात्मक परियोजनाहरूको लागि नेपाली वेबसाइट',
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png' },
-    ],
-    apple: '/apple-icon.png',
-  },
+  icon: '/jai.png',
+},
   openGraph: {
     title: "जनताको AI",
     description: 'जनताको AI - नेपालको तथ्य-आधारित विश्लेषण र अन्तर्क्रियात्मक परियोजनाहरूको लागि नेपाली वेबसाइट',
