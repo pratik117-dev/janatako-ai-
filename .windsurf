@@ -1,0 +1,52 @@
+
+
+# janatakoai.com — Public Accountability Platform
+
+## Philosophy
+A calm, serious, institutional website for JAI — a fictional public-accountability AI character for Nepal's Election 2082. Not a campaign site, not a party mouthpiece. Fact-centered, minimal, and deeply intentional.
+
+## Design System
+- **Background:** White / off-white
+- **Accent Color:** Dark maroon — bold, grounded, culturally resonant
+- **Typography:** Clean, minimal, with Nepali (Devanagari) text support
+- **No crowd photos, no rallies, no political faces — only JAI's symbolic identity**
+- **Tone:** शान्त · गम्भीर · संस्थागत · तथ्य–केन्द्रित
+
+---
+
+## Pages & Features
+
+### 1. Homepage
+- **Hero Section:** Symbolic JAI visual with the single powerful line: *"म भोट माग्दिन। म हिसाब चाहन्छु।"*
+- Subtitle: *Election 2082 | Public Accountability AI*
+- One button only: **[ JAI के हो? ]** → links to About page
+- **Intro Video Section:** Click-to-play video placeholder (no autoplay), space for a 60–90 second disciplined intro video to be added later
+
+### 2. About JAI Page (JAI को बारेमा)
+Four fixed sections:
+- **JAI के हो** — Fictional AI, public accountability character, election-focused
+- **JAI के होइन** (bold) — Not a candidate, not a party, not a campaigner, not a fortune-teller
+- **JAI किन आवश्यक छ** — Emotion doesn't run a country; policy = cost + time + capacity
+- **JAI कसरी काम गर्छ** — Public claim analysis: feasibility, cost, timeline, risk
+
+### 3. Vision Page (JAI को भिजन)
+- Clean short paragraphs (no bullets, no slogans)
+- Topics: State ≠ laboratory, strong institutions, capacity-based policy, facts not slogans
+- Closing line: *"This is not a manifesto. This is a benchmark."*
+
+### 4. Contact Page (JAI लाई सोध्नुहोस्)
+- Simple form with fields: Name (optional), Question/claim/plan, Category (policy, economy, governance, election process)
+- Notice above submit: *"JAI ले प्रश्न छान्छ। सबैको जवाफ तुरुन्त दिइँदैन।"*
+- **Supabase backend** to store submissions
+- No phone, no WhatsApp — email only contact
+
+### 5. Navigation & Layout
+- Minimal top navigation across all pages
+- **Social media section** with icon links: X, Facebook, YouTube, TikTok
+- **Footer** on every page with explicit disclaimer: *"JAI is a fictional public-accountability AI character. JAI does not seek votes, endorse candidates, or represent any political party."* + © janatakoai.com | Election 2082
+
+### Strict Exclusions
+- ❌ No party names, no politician photos, no personal names
+- ❌ No Donate / Join / Volunteer buttons
+- ❌ No election win/loss language
+
