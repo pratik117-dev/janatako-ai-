@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeevan KC's Portfolio",
-    template: `%s | Jeevan KC`,
+    default: "जनताको AI",
+    template: `%s | जनताको AI`,
   },
-  description: 'A personal portfolio website showcasing projects and skills by Jeevan KC, a computer engineer, IT entrepreneur, and software developer from Nepal.',
+  description: 'जनताको AI - नेपालको तथ्य-आधारित विश्लेषण र अन्तर्क्रियात्मक परियोजनाहरूको लागि नेपाली वेबसाइट',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: "Jeevan KC's Portfolio",
-    description: 'A personal portfolio website showcasing projects and skills by Jeevan KC, a computer engineer and software developer from Nepal.',
+    title: "जनताको AI",
+    description: 'जनताको AI - नेपालको तथ्य-आधारित विश्लेषण र अन्तर्क्रियात्मक परियोजनाहरूको लागि नेपाली वेबसाइट',
     type: 'website',
-    locale: 'en_US',
-    url: 'https://jeevan-kc.com.np',
+    locale: 'ne_NP',
+    url: 'https://janatakoai.com',
   },
 };
 
