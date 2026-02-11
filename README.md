@@ -1,30 +1,31 @@
-# 📌 Portfolio Website
+# 🤖 जनताको AI (JAI Platform)
 
-A modern, full-stack portfolio website built with **Next.js**, featuring a dynamic blog, project showcase, and a secure admin dashboard.
+A modern, full-stack AI platform built with **Next.js**, featuring public accountability analysis, interactive projects, and a secure admin dashboard for Nepal's Election 2082.
 
 ## 🔗 Live Links
 
-- **Frontend:** https://jeevan-kc.com.np/    
- 
+- **Frontend:** https://janatakoai.com/
 
 ## ✨ Features
 
 ### 🔹 Public Features
-- Modern and responsive homepage with hero section  
-- Dynamic blog listing page (ISR – Incremental Static Regeneration)  
-- Individual blog detail pages with rich text content, statically generated for speed  
+- Modern and responsive homepage with AI platform branding  
+- Dynamic analysis listing page (ISR – Incremental Static Regeneration)  
+- Individual analysis detail pages with rich content, statically generated for speed  
 - Dynamic project showcase page  
-- About Me section with skills and work experience  
+- About JAI section with platform mission and methodology  
 - Fully responsive design for all devices  
+- Public question submission form with validation  
 
 ### 🔹 Admin Features
 - Secure authentication managed by NextAuth.js  
 - Private admin dashboard with sidebar layout  
-- Full CRUD functionality for blogs  
+- Full CRUD functionality for analyses  
 - Full CRUD functionality for projects  
-- Rich text editor for blog/project content using TipTap  
+- Rich text editor for content using TipTap  
 - Admin password change functionality  
-- Protected routes and API endpoints for owner-only access  
+- Protected routes and API endpoints for admin-only access  
+- Query management for public submissions  
 
 ### 🔹 Technical Features
 - SSR, SSG, and ISR supported  
@@ -66,10 +67,9 @@ A modern, full-stack portfolio website built with **Next.js**, featuring a dynam
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/your-username/janatakoai.git
+cd janatakoai
 ```
-
 
 ### 2. Install Dependencies
 ```bash
@@ -78,7 +78,7 @@ pnpm install
 
 ### 3. Environment Setup
 
-Create a .env file in the root directory and add the following variables:
+Create a .env file in root directory and add following variables:
 ```bash
 # Database Connection String from Neon
 DATABASE_URL="postgresql://username:password@host/database?sslmode=require"
@@ -98,7 +98,7 @@ pnpm exec prisma generate
 # Apply migrations to create database tables
 pnpm exec prisma migrate dev
 
-# Seed the database with the initial admin user
+# Seed database with initial admin user
 pnpm exec prisma db seed
 ```
 
@@ -109,10 +109,10 @@ pnpm run dev
 
 Open http://localhost:3000 in your browser.
 
-📁 Project Structure
+## 📁 Project Structure
 
 ``` bash
-portfolio-fullstack/
+janatakoai/
 ├── prisma/
 │   ├── schema.prisma        # Database schema
 │   └── seed.ts              # Seed script
@@ -132,9 +132,9 @@ portfolio-fullstack/
         ├── middlewares/     # Custom middlewares (e.g., catchAsync)
         ├── utils/           # Utility functions (e.g., jwt.ts)
         └── validations/     # Zod schemas
-
 ```
-### 🚀 Deployment
+
+## 🚀 Deployment
 
 This project is optimized for deployment on Vercel.
 
@@ -150,10 +150,10 @@ Environment Variables for Production
 ```bash
 DATABASE_URL="your-production-database-url"
 AUTH_SECRET="your-production-secret"
-NEXT_PUBLIC_API_BASE_URL="[https://your-live-domain.com](https://your-live-domain.com)"
+NEXT_PUBLIC_API_BASE_URL="https://janatakoai.com"
 ```
 
-### 📝 API Endpoints
+## 📝 API Endpoints
 
 All endpoints are prefixed with /api/v1.
 
@@ -165,17 +165,17 @@ POST /api/auth/signout: (Handled by NextAuth)
 
 PATCH /api/v1/auth/change-password: Change admin password (Protected)
 
-## Blogs
+## Analyses (Blogs)
 
-GET /api/v1/blogs: Get all blogs.
+GET /api/v1/blogs: Get all analyses.
 
-GET /api/v1/blogs/[id]: Get a single blog.
+GET /api/v1/blogs/[id]: Get a single analysis.
 
-POST /api/v1/blogs: Create a new blog (Protected).
+POST /api/v1/blogs: Create a new analysis (Protected).
 
-PATCH /api/v1/blogs/[id]: Update a blog (Protected).
+PATCH /api/v1/blogs/[id]: Update an analysis (Protected).
 
-DELETE /api/v1/blogs/[id]: Delete a blog (Protected).
+DELETE /api/v1/blogs/[id]: Delete an analysis (Protected).
 
 ## Projects
 
@@ -189,10 +189,20 @@ PATCH /api/v1/projects/[id]: Update a project (Protected).
 
 DELETE /api/v1/projects/[id]: Delete a project (Protected).
 
-## 👤 Author
+## Submissions (Queries)
 
-# Jeevan KC
+GET /api/v1/submissions: Get all public submissions.
 
-GitHub: [JeevanKC-Github](https://github.com/jeevankc17)
+POST /api/v1/submissions: Create new public submission.
 
-LinkedIn: [Jeevan KC](https://www.linkedin.com/in/jeevankc17)
+## 🏛️ About JAI Platform
+
+जनताको AI (JAI) is a public accountability and fact-based analysis platform for Nepal's Election 2082. 
+The platform provides:
+
+- **Fact-based Analysis**: Evidence-driven political and policy analysis
+- **Public Accountability**: Tools for holding leaders accountable  
+- **Interactive Projects**: Data visualization and analysis tools
+- **Citizen Engagement**: Platform for public questions and submissions
+
+JAI focuses on providing accurate, data-driven insights to help citizens make informed decisions during Nepal's democratic processes.
