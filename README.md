@@ -4,7 +4,7 @@ A modern, full-stack AI platform built with **Next.js**, featuring public accoun
 
 ## 🔗 Live Links
 
-- **Frontend:** https://janatakoai.com/
+- **Frontend:** https://janatako.ai/
 
 ## ✨ Features
 
@@ -204,5 +204,6 @@ The platform provides:
 - **Public Accountability**: Tools for holding leaders accountable  
 - **Interactive Projects**: Data visualization and analysis tools
 - **Citizen Engagement**: Platform for public questions and submissions
+
 
 JAI focuses on providing accurate, data-driven insights to help citizens make informed decisions during Nepal's democratic processes.
