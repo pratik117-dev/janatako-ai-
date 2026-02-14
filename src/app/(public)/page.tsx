@@ -39,21 +39,26 @@ const HomePage = () => {
 
   // Enable audio on any user interaction
   useEffect(() => {
-    const enableAudio = () => {
+    const enableAudio = (e: Event) => {
+      // Don't interfere if clicking on the video itself
+      if (e.target === videoRef.current) {
+        return;
+      }
+      
       if (!hasInteracted && videoRef.current && videoRef.current.muted) {
         videoRef.current.muted = false;
         setHasInteracted(true);
       }
     };
 
-    window.addEventListener('click', enableAudio, { once: true });
-    window.addEventListener('touchstart', enableAudio, { once: true });
-    window.addEventListener('keydown', enableAudio, { once: true });
+    document.addEventListener('click', enableAudio, { once: true });
+    document.addEventListener('touchstart', enableAudio, { once: true, passive: true });
+    document.addEventListener('keydown', enableAudio, { once: true });
 
     return () => {
-      window.removeEventListener('click', enableAudio);
-      window.removeEventListener('touchstart', enableAudio);
-      window.removeEventListener('keydown', enableAudio);
+      document.removeEventListener('click', enableAudio);
+      document.removeEventListener('touchstart', enableAudio);
+      document.removeEventListener('keydown', enableAudio);
     };
   }, [hasInteracted]);
 
@@ -103,7 +108,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center animate-fade-in-up">
             {/* Left Side - Clean Video Frame */}
-            <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
+            <div className="relative flex justify-center lg:justify-start order-1 lg:order-1">
               <div className="relative w-full max-w-md">
                 {/* Video container - clean, no borders */}
                 <div className="relative w-full">
@@ -115,6 +120,25 @@ const HomePage = () => {
                     className="w-full h-auto"
                     style={{
                       mixBlendMode: 'normal',
+                    }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Enable audio if not already enabled
+                      if (videoRef.current && videoRef.current.muted) {
+                        videoRef.current.muted = false;
+                        setHasInteracted(true);
+                      }
+                      // Ensure video keeps playing
+                      if (videoRef.current && videoRef.current.paused) {
+                        videoRef.current.play();
+                      }
+                    }}
+                    onTouchStart={(e) => {
+                      // Enable audio on touch
+                      if (videoRef.current && videoRef.current.muted) {
+                        videoRef.current.muted = false;
+                        setHasInteracted(true);
+                      }
                     }}
                   >
                     <source src="/videos/mainvideo.mp4" type="video/mp4" />
@@ -133,7 +157,7 @@ const HomePage = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="text-center lg:text-left space-y-8 order-1 lg:order-2">
+            <div className="text-center lg:text-left space-y-8 order-2 lg:order-2">
               {/* Logo/Symbol */}
               <div className="mb-8 inline-flex flex-col items-center lg:items-start gap-4">
                 
