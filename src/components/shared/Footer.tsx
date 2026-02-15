@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Mail, Twitter, Facebook, Instagram, Youtube, MapPin, Phone, Globe } from "lucide-react";
 
 /**
- * Footer Component - Red Civic Theme
- * Modern, clean footer matching the navbar aesthetic
- * Features: Multi-column layout, social links, contact info, newsletter
+ * Footer Component - Purple Theme
+ * Uses dynamic CSS classes from globals-purple-theme.css
+ * Fully responsive and themed
  */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,10 +46,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Logo */}
+            {/* Logo - Using text-primary-color class */}
             <Link href="/" className="inline-block">
               <h3 className="text-2xl font-bold text-gray-900">
-                जनताको <span className="text-red-500">AI</span>
+                जनताको <span className="text-primary-color">AI</span>
               </h3>
               <p className="text-sm text-gray-600 mt-1">नेपालको लागि स्मार्ट शासन</p>
             </Link>
@@ -60,23 +60,23 @@ const Footer = () => {
               प्रत्येक नागरिकका लागि समान अवसर र न्याय।
             </p>
 
-            {/* Contact Info */}
+            {/* Contact Info - Using text-primary-color for icons */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-600">
-                <MapPin size={18} className="text-red-500 flex-shrink-0" />
+                <MapPin size={18} className="text-primary-color flex-shrink-0" />
                 <span className="text-sm">काठमाडौं, नेपाल</span>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
-                <Phone size={18} className="text-red-500 flex-shrink-0" />
+                <Phone size={18} className="text-primary-color flex-shrink-0" />
                 <span className="text-sm">+977 01-1234567</span>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
-                <Mail size={18} className="text-red-500 flex-shrink-0" />
+                <Mail size={18} className="text-primary-color flex-shrink-0" />
                 <span className="text-sm">info@janatakoai.np</span>
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* Social Links - Using hover-bg-primary-color */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -85,7 +85,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center 
-                           text-gray-600 hover:bg-red-500 hover:text-white transition-all duration-300 
+                           text-gray-600 hover-bg-primary-color hover:text-white transition-all duration-300 
                            hover:scale-110"
                   aria-label={social.label}
                 >
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-red-500 transition-colors text-sm"
+                    className="text-gray-600 hover-primary-color transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -120,7 +120,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-red-500 transition-colors text-sm"
+                    className="text-gray-600 hover-primary-color transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-red-500 transition-colors text-sm"
+                    className="text-gray-600 hover-primary-color transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -147,7 +147,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
+        {/* Newsletter Section - Using input-civic class */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="max-w-2xl">
             <h4 className="font-bold text-gray-900 mb-2">न्यूजलेटर सदस्यता लिनुहोस्</h4>
@@ -158,14 +158,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="तपाईंको इमेल"
-                className="flex-1 h-12 px-4 rounded-lg border border-gray-300 bg-white 
-                         text-gray-900 placeholder:text-gray-400 
-                         focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                className="input-civic flex-1"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg 
-                         hover:bg-red-600 transition-all duration-300 hover:scale-105 
+                className="px-6 py-3 bg-primary-color text-white font-semibold rounded-lg 
+                         hover:bg-[#4A148C] transition-all duration-300 hover:scale-105 
                          active:scale-95 whitespace-nowrap"
               >
                 सदस्यता लिनुहोस्
@@ -186,14 +184,14 @@ const Footer = () => {
 
             {/* Language & Quick Links */}
             <div className="flex items-center gap-6">
-              <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-red-500 transition-colors">
+              <button className="flex items-center gap-2 text-sm text-gray-600 hover-primary-color transition-colors">
                 <Globe size={16} />
                 <span>नेपाली</span>
               </button>
-              <Link href="/sitemap" className="text-sm text-gray-600 hover:text-red-500 transition-colors">
+              <Link href="/sitemap" className="text-sm text-gray-600 hover-primary-color transition-colors">
                 साइट म्याप
               </Link>
-              <Link href="/accessibility" className="text-sm text-gray-600 hover:text-red-500 transition-colors">
+              <Link href="/accessibility" className="text-sm text-gray-600 hover-primary-color transition-colors">
                 पहुँचयोग्यता
               </Link>
             </div>
@@ -201,8 +199,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Decorative Bottom Border */}
-      <div className="h-1 bg-gradient-to-r from-red-500 via-red-600 to-red-500"></div>
+      {/* Decorative Bottom Border - Purple Gradient */}
+      <div className="h-1 bg-gradient-to-r from-[#800080] via-[#4A148C] to-[#800080]"></div>
     </footer>
   );
 };

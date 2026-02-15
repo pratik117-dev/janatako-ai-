@@ -174,7 +174,7 @@ const HomePage = () => {
                 <h1 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
                   म भोट माग्दिन।
                   <br />
-                  <span className="text-gradient-red">म हिसाब चाहन्छु।</span>
+                  <span className="text-gradient-purple">म हिसाब चाहन्छु।</span>
                 </h1>
                 
                 <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed px-4 sm:px-0">
@@ -200,33 +200,26 @@ const HomePage = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 sm:pt-6 lg:pt-8 px-2 sm:px-0">
-                {stats.map((stat, index) => (
-                  <div 
-                    key={stat.label} 
-                    className="text-center lg:text-left animate-fade-in-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-red-100 text-red-600 mb-2 sm:mb-3">
-                      <stat.icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                    </div>
-                    <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1">
-                      {stat.value}
-                    </p>
-                    <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600 leading-tight">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
+<div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 sm:pt-6 lg:pt-8 px-2 sm:px-0">
+  {stats.map((stat, index) => (
+    <div 
+      key={stat.label} 
+      className="text-center lg:text-left animate-fade-in-up"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-purple-100 text-[#800080] mb-2 sm:mb-3">
+        <stat.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+      </div>
+      <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1">
+        {stat.value}
+      </p>
+      <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600 leading-tight">
+        {stat.label}
+      </p>
+    </div>
+  ))}
+</div>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-red-300 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-red-500 rounded-full"></div>
           </div>
         </div>
       </section>
@@ -237,12 +230,12 @@ const HomePage = () => {
     {/* Section Header */}
     <div className="text-center mb-8 sm:mb-10 lg:mb-12 animate-fade-in-up">
       <div className="inline-block mb-3 sm:mb-4">
-        <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-red-100 rounded-full border border-red-200">
-          <span className="text-xs sm:text-sm font-bold text-red-600 uppercase tracking-wide">
-            परिचय भिडियो
-          </span>
-        </div>
-      </div>
+  <div className="badge-civic-purple px-3 py-1.5 sm:px-4 sm:py-2">
+    <span className="text-xs sm:text-sm font-bold uppercase tracking-wide">
+      परिचय भिडियो
+    </span>
+  </div>
+</div>
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4 sm:px-0">
         JAI कसरी काम गर्छ?
       </h2>
@@ -266,7 +259,7 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none opacity-100 group-hover:opacity-0 transition-opacity"></div>
         
         {/* Decorative elements */}
-        <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2 py-1 sm:px-3 sm:py-1.5 bg-red-500 text-white text-[10px] sm:text-xs font-bold rounded-full pointer-events-none">
+        <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2 py-1 sm:px-3 sm:py-1.5 bg-purple-700 text-white text-[10px] sm:text-xs font-bold rounded-full pointer-events-none">
           NEW
         </div>
       </div>
@@ -309,29 +302,84 @@ const HomePage = () => {
 
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-red-500 to-red-600">
-        <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white px-4 sm:px-0">
+       <section className="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 overflow-hidden">
+      {/* Purple Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#800080] to-[#4A148C]"></div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+      
+      {/* Pattern Overlay */}
+      <div className="absolute inset-0 bg-pattern-dots opacity-5"></div>
+
+      {/* Content */}
+      <div className="relative max-w-5xl mx-auto">
+        {/* Main Content */}
+        <div className="text-center space-y-8 mb-12">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+            <CheckCircle size={16} className="text-white" />
+            <span className="text-sm font-medium text-white">
+              जनताको आवाज, JAI सँग
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white px-4 sm:px-0 leading-tight">
             तपाईं पनि JAI को हिस्सा बन्नुहोस्
           </h2>
-          <p className="text-base sm:text-lg text-white/90 max-w-2xl mx-auto px-4 sm:px-0">
+          
+          {/* Description */}
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
             नेपालको भविष्य निर्माण गर्न हामीसँग सहकार्य गर्नुहोस्। 
             पारदर्शी र जवाफदेही शासनको लागि आफ्नो योगदान दिनुहोस्।
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4 px-4 sm:px-0">
-            <Button asChild size="lg" className="bg-white text-red-600 hover:bg-gray-100 font-bold">
-              <Link href="/participate">
-                सहभागी हुनुहोस्
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10">
-              <Link href="/contact">
-                सम्पर्क गर्नुहोस्
-              </Link>
-            </Button>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 px-4 sm:px-0">
+            {/* Primary Button */}
+            <Link 
+              href="/participate"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#800080] font-bold rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-xl group"
+            >
+              <Users size={20} />
+              <span>सहभागी हुनुहोस्</span>
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+            
+            {/* Secondary Button */}
+            <Link 
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white bg-transparent text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+            >
+              <span>सम्पर्क गर्नुहोस्</span>
+              <ArrowRight size={20} />
+            </Link>
           </div>
         </div>
-      </section>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto pt-8 border-t border-white/20">
+          {stats.map((stat, index) => (
+            <div 
+              key={stat.label}
+              className="text-center animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <p className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                {stat.value}
+              </p>
+              <p className="text-sm sm:text-base text-white/80">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
     </div>
   );
 };

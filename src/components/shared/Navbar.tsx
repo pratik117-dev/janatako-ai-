@@ -10,7 +10,7 @@ const navItems = [
   { to: "/", label: "गृह पृष्ठ" },
   { to: "/about", label: "परिचय" },
   { to: "/projects", label: "प्रोजेक्ट मार्केट" },
-  { to: "/life", label: "पूर्ण जीवनी" },
+  { to: "/vision", label: "भिजन" },
   { to: "/contact", label: "निर्वाचन अपडेट" },
 ];
 
